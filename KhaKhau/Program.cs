@@ -15,6 +15,7 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("KhaKhauContextConnection") ?? throw new InvalidOperationException("Connection string 'KhaKhauContextConnection' not found.");
 builder.Services.AddDbContext<KhaKhauContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services
     .AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
@@ -24,6 +25,7 @@ builder.Services
 //    .AddEntityFrameworkStores<KhaKhauContext>()
 //    .AddDefaultUI()
 //    .AddDefaultTokenProviders();
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();

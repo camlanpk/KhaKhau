@@ -18,7 +18,7 @@ namespace KhaKhau.Areas.Admin.Controllers
             var user = await _userReponsitory.GetAllAsync();
             return View(user);
         }
-        // Hiển thị form xác nhận xóa sản phẩm
+
         public async Task<IActionResult> Delete(string id)
         {
             var user = await _userReponsitory.GetByIdAsync(id);
@@ -28,7 +28,7 @@ namespace KhaKhau.Areas.Admin.Controllers
             }
             return View(user);
         }
-        // Xử lý xóa sản phẩm
+
         [HttpPost, ActionName("DeleteConfirmed")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

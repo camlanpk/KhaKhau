@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore.Migrations;
 using System.Security.Cryptography.Xml;
 using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 
 namespace KhaKhau.Areas.Admin.Controllers
 {
@@ -25,9 +26,15 @@ namespace KhaKhau.Areas.Admin.Controllers
             _userOrderRepository = userOrderRepository;
         }
         // Hiển thị danh sách sản phẩm
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
             var products = await _productRepository.GetAllAsync();
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase));
+            }
+            int totalProducts = products.Count();
+            ViewBag.totalProducts = totalProducts;
             return View(products);
         }
         // Hiển thị form thêm sản phẩm mới

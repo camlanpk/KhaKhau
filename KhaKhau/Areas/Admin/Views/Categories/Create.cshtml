@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model KhaKhau.Areas.Admin.Models.Category
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<h2>Thêm danh mục món ăn</h2>
+<form asp-action="create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="thumbnail" id="imgPreview" style="background-color:aliceblue;max-width:fit-content">
+        <img id="targetImg" style="max-width:180px; />
+        <div class="caption">
+            <a href="#" onclick="clearPreview()">
+                <i class="fas fa-solid fa-trash fa-lg"></i>
+            </a>
+            <span id="description"> </span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Tạo mới</button>
+</form>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+

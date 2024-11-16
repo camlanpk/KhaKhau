@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    // Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+ @model IEnumerable<KhaKhau.Areas.Admin.Models.Category>
+<div class="container-fluid"></div>
+<h4>
+    <a class="d-inline-block nav-link" href="/admin/ProductManager">
+        Admin
+    </a>
+    >
+    <a asp-area="Admin" asp-controller="Categories" asp-action="Index">
+        Danh mục món
+    </a>
+</h4>
+<a class="nav-link mb-1" id="btn-create" asp-area="Admin" asp-controller="Categories" asp-action="create">Thêm mới</a>
+<style>
+    #btn-create{
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        background-color: chocolate;
+        font-size: 18px;
+        color:white;
+    }
+</style>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Bảng dữ liệu của Danh mục món ăn</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Tên danh mục</th>
+                            <th>Tùy chỉnh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <td>@category.Name</td>
+                                <td>
+                                    <a class="btn btn-info" asp-action="Detail" asp-route-id="@category.Id">Chi tiết</a>
+                                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@category.Id">Chỉnh sửa</a>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@category.Id">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+
+        </div>
+    </div>
+</footer>
+
+<script src="/admin/vendor/jquery/jquery.min.js"></script>
+<script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/admin/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
