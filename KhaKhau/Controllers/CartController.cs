@@ -46,8 +46,8 @@ namespace KhaKhau.Controllers
             if (!ModelState.IsValid)
                 return View(model);
             bool isCheckedOut = await _cartRepository.DoCheckout(model);
-            if (!isCheckedOut)
-                return RedirectToAction(nameof(OrderFailure));
+            //if (!isCheckedOut)
+            //    return RedirectToAction(nameof(OrderFailure));
             return RedirectToAction(nameof(OrderSuccess));
         }
         //hai view render if order thanh cong!!
