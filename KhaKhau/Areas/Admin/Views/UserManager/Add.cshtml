@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model KhaKhau.Areas.Identity.Data.ApplicationUser
+
+<h2>Thêm người dùng</h2>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label>First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+    <a asp-action="Index" class="btn btn-secondary">Trở về</a>
+
+</form>
