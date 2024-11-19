@@ -5,10 +5,12 @@
 }
 
 @model KhaKhau.Areas.Admin.Models.Product
-<h2>Delete Product</h2>
+<h2>Xóa sản phẩm</h2>
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />
     <p>Are you sure you want to delete @Model.Name?</p>
-    <button type="submit" class="btn btn-danger">Delete</button>
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Trở về</a>
+
 </form>
 

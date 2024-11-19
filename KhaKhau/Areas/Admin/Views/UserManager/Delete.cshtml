@@ -9,6 +9,8 @@
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />
     <p>Are you sure you want to delete @Model.LastName, @Model.FirstName?</p>
-    <button type="submit" class="btn btn-danger">Delete</button>
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Trở về</a>
+
 </form>
 

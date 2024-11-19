@@ -10,7 +10,8 @@ namespace KhaKhau.Repositories
             Task<ApplicationUser> GetByIdAsync(string id);
             Task AddAsync(ApplicationUser product);
             Task UpdateAsync(ApplicationUser product);
-            Task DeleteAsync(int id);
+            Task DeleteAsync(string id);
+
         }
     
 }

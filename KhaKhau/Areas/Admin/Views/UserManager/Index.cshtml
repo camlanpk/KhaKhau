@@ -10,8 +10,8 @@
 
 @model IEnumerable<KhaKhau.Areas.Identity.Data.ApplicationUser>
 <div class="container-fluid"></div>
-<h1>List Menu</h1>
-<a class="btn btn-light" id="btn-create" asp-area="Admin" asp-controller="UserManager" asp-action="Add">Create New</a>
+<h1>Danh sách người dùng</h1>
+<a class="nav-link mb-1" id="btn-create" asp-area="Admin" asp-controller="UserManager" asp-action="Add">Thêm mới</a>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -32,10 +32,6 @@
                 <td>@user.Email</td>
                 <td>@user.Address</td>
                 <td>@user.PhoneNumber</td>
-
-
-                
-               
                 <td>
                     @if (user.Id.Equals("da9c226b-c79b-4d64-853d-19dd75bc50ef"))
                     {
@@ -47,7 +43,6 @@
                     }
                     else
                     {
-                        <a class="btn btn-info" asp-action="Display" asp-route-id="@user.Id">View</a>
                         <a class="btn btn-success" asp-action="Update" asp-route-id="@user.Id">Edit</a>
                         <a class="btn btn-danger" asp-action="Delete" asp-route-id="@user.Id">Delete</a>
                     }
@@ -58,7 +53,16 @@
     </tbody>
 </table>
 <style>
-
+    #btn-create {
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        background-color: chocolate;
+        font-size: 18px;
+        color: white;
+    }
 </style>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
