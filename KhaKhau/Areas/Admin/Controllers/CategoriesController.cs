@@ -76,6 +76,20 @@ namespace KhaKhau.Areas.Admin.Controllers
             var category = await _context.Categories
                 .FirstOrDefaultAsync(m => m.Id == id);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+<<<<<<< HEAD
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
             return View(category);
         }
         [HttpPost, ActionName("Delete")]
@@ -83,7 +97,15 @@ namespace KhaKhau.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var category = await _context.Categories
+<<<<<<< HEAD
+<<<<<<< HEAD
                 .Include(c => c.Products) 
+=======
+                .Include(c => c.Products) // Load related products
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+                .Include(c => c.Products) // Load related products
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (category == null)

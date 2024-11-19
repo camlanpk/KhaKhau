@@ -1,7 +1,15 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
+<<<<<<< HEAD
+<<<<<<< HEAD
     // Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+=======
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
 }
 
  @model IEnumerable<KhaKhau.Areas.Admin.Models.Category>
@@ -12,10 +20,23 @@
     </a>
     >
     <a asp-area="Admin" asp-controller="Categories" asp-action="Index">
+<<<<<<< HEAD
+<<<<<<< HEAD
         Danh mục món
     </a>
 </h4>
 <a class="nav-link mb-1" id="btn-create" asp-area="Admin" asp-controller="Categories" asp-action="create">Thêm mới</a>
+=======
+=======
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+        Danh sách món
+    </a>
+</h4>
+<a class="nav-link mb-1" id="btn-create" asp-area="Admin" asp-controller="Categories" asp-action="create">thêm mới</a>
+<<<<<<< HEAD
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
 <style>
     #btn-create{
         width: fit-content;
@@ -35,7 +56,15 @@
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+<<<<<<< HEAD
+<<<<<<< HEAD
             <h6 class="m-0 font-weight-bold text-primary">Bảng dữ liệu của Danh mục món ăn</h6>
+=======
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -52,6 +81,14 @@
                             <tr>
                                 <td>@category.Name</td>
                                 <td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                    <a class="btn btn-info" asp-action="Detail" asp-route-id="@category.Id">Chi tiết</a>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+                                    <a class="btn btn-info" asp-action="Detail" asp-route-id="@category.Id">Chi tiết</a>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
                                     <a class="btn btn-success" asp-action="Edit" asp-route-id="@category.Id">Chỉnh sửa</a>
                                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@category.Id">Xóa</a>
                                 </td>
@@ -67,7 +104,15 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            <span>Copyright &copy; Your Website 2020</span>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
+=======
+            <span>Copyright &copy; Your Website 2020</span>
+>>>>>>> 4d0ce4fb991be6139ebcc89e27fc47f2caf3d4dc
         </div>
     </div>
 </footer>
